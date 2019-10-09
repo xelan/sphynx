@@ -58,7 +58,7 @@ void strtoupper(char *s)
  * Splits the source data file into five-byte buckets, using three-byte sub folders.
  */
 int main(int argc, char** argv)
-{   
+{
     FILE *fpDataFile;
     FILE *fpBucketFile;
     char *line = NULL;
@@ -95,12 +95,12 @@ int main(int argc, char** argv)
     while ((read = getline(&line, &len, fpDataFile)) != -1) {
         char prefix[6] =  {};
         char prefixPart[4] =  {};
-        char suffix[62] = {};
-        char suffixForOutput[63] = {};
+        char suffix[67] = {};
+        char suffixForOutput[68] = {};
         char bucketFileDir[255];
         char bucketFilePath[255];
-        
-        if (strlen(line) > 48) {
+
+        if (strlen(line) > 53) {
             printf("Invalid line %d!\n", currentLine);
             continue;
         }
